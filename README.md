@@ -35,5 +35,5 @@ A chave é `Subcategoria|Nome` (por exemplo `"Quarta|Feijoada":11`). Vários ite
 
 ## Observações
 - Itens sem foto mostram um ícone Phosphor da subcategoria (mapa `EM` em `js/data.js`).
-- Faltam fotos em: Pães do café (pão com manteiga, pão de leite, pão de queijo com requeijão, pingado), Lanches, Churrasco, Beirute e Hambúrgueres.
+- Faltam fotos em: Pães do café (pão com manteiga, pão de leite, pão de queijo com requeijão, pingado) e Lanches.
 - Imagens são ilustrativas.

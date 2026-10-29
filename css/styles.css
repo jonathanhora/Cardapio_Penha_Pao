@@ -178,12 +178,12 @@ footer .brand{width:120px;height:54px;margin:0 auto 14px;display:block}
 .ph8{background-image:url("../assets/img/produtos/terca-picadinho.webp")}
 .ph9{background-image:url("../assets/img/produtos/terca-bife-a-role.webp")}
 .ph10{background-image:url("../assets/img/produtos/quarta-costela-com-mandioca.webp")}
-.ph11{background-image:url("../assets/img/produtos/quarta-feijoada.webp")}
-.ph12{background-image:url("../assets/img/produtos/quarta-feijoada-grande.webp")}
+.ph11{background-image:url("../assets/img/produtos/sabado-feijoada.webp")}
+.ph12{background-image:url("../assets/img/produtos/sabado-feijoada-media.webp")}
 .ph13{background-image:url("../assets/img/produtos/quinta-frango-ao-molho-com-legumes.webp")}
-.ph14{background-image:url("../assets/img/produtos/quinta-frango-assado-com-batata.webp")}
+.ph14{background-image:url("../assets/img/produtos/sabado-comercial-frango-assado.webp")}
 .ph15{background-image:url("../assets/img/produtos/quinta-panqueca.webp")}
-.ph16{background-image:url("../assets/img/produtos/quinta-pernil.webp")}
+.ph16{background-image:url("../assets/img/produtos/sexta-pernil.webp")}
 .ph17{background-image:url("../assets/img/produtos/sexta-almondegas.webp")}
 .ph18{background-image:url("../assets/img/produtos/sexta-cupim-assado.webp")}
 .ph19{background-image:url("../assets/img/produtos/sexta-peixe-ao-molho.webp")}
@@ -217,7 +217,7 @@ footer .brand{width:120px;height:54px;margin:0 auto 14px;display:block}
 .ph48{background-image:url("../assets/img/produtos/todos-os-dias-contra-file.webp")}
 .ph49{background-image:url("../assets/img/produtos/todos-os-dias-contra-a-cavalo.webp")}
 .ph50{background-image:url("../assets/img/produtos/todos-os-dias-file-de-frango.webp")}
-.ph51{background-image:url("../assets/img/produtos/todos-os-dias-milanesa.webp")}
+.ph51{background-image:url("../assets/img/produtos/sabado-milanesa.webp")}
 .ph52{background-image:url("../assets/img/produtos/sabado-frango-assado.webp")}
 .ph53{background-image:url("../assets/img/produtos/porcoes-fritas-grande.webp")}
 .ph54{background-image:url("../assets/img/produtos/porcoes-fritas-pequena.webp")}
@@ -334,3 +334,48 @@ footer .brand{width:120px;height:54px;margin:0 auto 14px;display:block}
 .ph165{background-image:url("../assets/img/produtos/mini-salgados-croissant.webp")}
 .ph166{background-image:url("../assets/img/produtos/mini-salgados-empada.webp")}
 .ph167{background-image:url("../assets/img/produtos/mini-salgados-esfihas.webp")}
+
+#pre{position:fixed;inset:0;z-index:9999;background:#530303;display:grid;place-items:center;transition:opacity .8s ease,visibility .8s}
+#pre.done{opacity:0;visibility:hidden}
+#pre .pw{display:grid;justify-items:center;gap:26px}
+#pre svg{width:min(58vw,280px);height:auto;overflow:visible;animation:pBreathe 3s ease-in-out 1.4s infinite}
+#pre .p{opacity:0;transform-box:fill-box;transform-origin:center;animation:pIn .6s cubic-bezier(.22,.8,.3,1) forwards;animation-delay:calc(.25s + var(--i)*17ms)}
+#pre .ring{animation-name:pRing;animation-duration:.8s;animation-delay:calc(var(--i)*.14s)}
+@keyframes pRing{from{opacity:0;transform:scale(.78)}to{opacity:1;transform:scale(1)}}
+@keyframes pIn{from{opacity:0;transform:translateY(7px) scale(.9)}to{opacity:1;transform:none}}
+@keyframes pBreathe{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+@media (prefers-reduced-motion:reduce){#pre svg,#pre .p{animation:none;opacity:1}}
+header.hero{margin-bottom:20px}
+@media(min-width:700px){.chips>:first-child{margin-left:auto}.chips>:last-child{margin-right:auto}}
+.ph168{background-image:url("../assets/img/produtos/churrasco-file-de-frango-com-queijo-e-salada.webp")}
+.ph169{background-image:url("../assets/img/produtos/churrasco-file-de-frango-com-salada.webp")}
+.ph170{background-image:url("../assets/img/produtos/churrasco-file-de-frango-simples.webp")}
+.ph171{background-image:url("../assets/img/produtos/churrasco-mortadela-ouro-com-queijo-e-vinagrete.webp")}
+.ph172{background-image:url("../assets/img/produtos/churrasco-mortadela-ouro-com-queijo-ou-vinagrete.webp")}
+.ph173{background-image:url("../assets/img/produtos/churrasco-mortadela-ouro-simples.webp")}
+.ph174{background-image:url("../assets/img/produtos/churrasco-pao-com-ovo-e-queijo.webp")}
+.ph175{background-image:url("../assets/img/produtos/churrasco-pao-com-ovo-e-salada.webp")}
+.ph176{background-image:url("../assets/img/produtos/churrasco-pao-com-ovo-queijo-e-salada.webp")}
+.ph177{background-image:url("../assets/img/produtos/churrasco-pao-com-ovo-simples.webp")}
+.ph178{background-image:url("../assets/img/produtos/churrasco-salame-com-queijo.webp")}
+.ph179{background-image:url("../assets/img/produtos/churrasco-salame-simples.webp")}
+.ph180{background-image:url("../assets/img/produtos/churrasco-calabresa-com-queijo-e-salada.webp")}
+.ph181{background-image:url("../assets/img/produtos/churrasco-calabresa-com-queijo-ou-salada.webp")}
+.ph182{background-image:url("../assets/img/produtos/churrasco-calabresa-simples.webp")}
+.ph183{background-image:url("../assets/img/produtos/churrasco-churrasco-com-queijo.webp")}
+.ph184{background-image:url("../assets/img/produtos/churrasco-churrasco-com-queijo-e-salada.webp")}
+.ph185{background-image:url("../assets/img/produtos/churrasco-churrasco-com-salada.webp")}
+.ph186{background-image:url("../assets/img/produtos/churrasco-churrasco-simples.webp")}
+.ph187{background-image:url("../assets/img/produtos/churrasco-file-de-frango-com-queijo.webp")}
+.ph188{background-image:url("../assets/img/produtos/churrasco-recheio-extra.webp")}
+.ph189{background-image:url("../assets/img/produtos/beirute-beirute-frango.webp")}
+.ph190{background-image:url("../assets/img/produtos/beirute-beirute-misto.webp")}
+.ph191{background-image:url("../assets/img/produtos/beirute-beirute-calabresa.webp")}
+.ph192{background-image:url("../assets/img/produtos/beirute-beirute-carne.webp")}
+.ph193{background-image:url("../assets/img/produtos/hamburgueres-x-burguer.webp")}
+.ph194{background-image:url("../assets/img/produtos/hamburgueres-x-egg.webp")}
+.ph195{background-image:url("../assets/img/produtos/hamburgueres-x-salada.webp")}
+.ph196{background-image:url("../assets/img/produtos/hamburgueres-x-tudo.webp")}
+.ph197{background-image:url("../assets/img/produtos/hamburgueres-x-bacon.webp")}
+.ph198{background-image:url("../assets/img/produtos/hamburgueres-x-bacon-com-ovo.webp")}
+.ph199{background-image:url("../assets/img/produtos/hamburgueres-x-big-burguer.webp")}

@@ -1,4 +1,5 @@
 /* Dados do cardápio: categorias, itens, preços, códigos e mapa de fotos. */
+
 // categoria: [id, nome, emoji, matiz]; sub: [nome, emoji, prefixo, itens "nome|descrição|preço" (preço/un opcional)]
 const C=[
 ["cafes","Cafés","☕",28,[["Cafés e pães","☕","",`Café expresso curto||7.5
