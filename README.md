@@ -34,7 +34,11 @@ css/styles.css                design system e estilos
 js/data.js                    categorias, itens, preços, códigos e mapa de fotos
 js/app.js                     filtros, busca e renderização
 assets/logo.svg               logo da padaria
-assets/img/hero-bg.jpg        foto de fundo do topo
+assets/img/hero-bg.webp       foto de fundo do topo
+assets/img/og-image.jpg       imagem que aparece ao compartilhar o link (1200x630)
+tools/build-seo.js            gera lista indexável, JSON-LD, sitemap e robots
+vercel.json                   cache e cabeçalhos de segurança
+robots.txt / sitemap.xml      para o Google
 assets/img/produtos/*.webp    fotos dos produtos (máx. 360 px, carregadas sob demanda)
 assets/fonts/                 fonte Inter (woff2)
 assets/icons/                 ícones do app
@@ -70,3 +74,12 @@ Vários itens podem apontar para o mesmo número e compartilhar a mesma foto.
 - **Offline:** o service worker (`sw.js`) usa a rede primeiro para textos e preços, então preço novo chega assim que há internet. Fotos, fonte e ícones ficam em cache. Só funciona em `https://` (ou localhost).
 - **Ao trocar fotos ou fonte,** aumente `V` em `sw.js` (ex.: `penha-v2`) para renovar o cache dos clientes.
 - **Novas fotos:** o nome do arquivo vem da lista `PF` em `js/app.js` (sem `.webp`), indexada pelo mapa `PH`.
+
+## 🔎 SEO e compartilhamento
+
+- **Metatags:** título, descrição, canonical, Open Graph (WhatsApp, Facebook, Instagram, LinkedIn) e Twitter/X em `index.html`. A imagem de compartilhamento é `assets/img/og-image.jpg` (1200 × 630, JPG, que é o formato aceito por todas as redes).
+- **Dados estruturados (JSON-LD):** padaria (`Bakery`), cardápio (`Menu`) e site (`WebSite`).
+- **Conteúdo indexável:** o cardápio completo fica no HTML (nome, descrição e preço) e é trocado pelo app assim que o JavaScript carrega. Robôs que não rodam JavaScript também leem tudo.
+- **Depois de editar `js/data.js`**, rode `node tools/build-seo.js` para atualizar essa lista, o JSON-LD e o `sitemap.xml`.
+- **Domínio próprio:** troque `SITE` em `tools/build-seo.js`, rode o script e troque as URLs `https://cardapiopenhapao.vercel.app` nas metatags de `index.html` (canonical, `og:url`, `og:image`, `twitter:image`).
+- **Testar o compartilhamento:** depois de publicar, cole o link em <https://developers.facebook.com/tools/debug/> e clique em "Coletar novamente". O WhatsApp guarda a imagem antiga em cache por um tempo.

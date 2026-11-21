@@ -2,8 +2,8 @@
    Textos/preços (html, css, js): rede primeiro (3 s) e cache como reserva → preço novo chega sempre que houver internet.
    Fotos, fonte e ícones: cache primeiro → segunda visita instantânea e funciona offline.
    Ao trocar fotos/fonte, aumente V para renovar o cache. */
-const V="penha-v1";
-const CORE=["./","index.html","css/styles.css","js/data.js","js/app.js","manifest.webmanifest","assets/logo.svg","assets/img/hero-bg.jpg","assets/fonts/inter-latin.woff2","assets/icons/icon-192.png","favicon.ico"];
+const V="penha-v2";
+const CORE=["./","index.html","css/styles.css","js/data.js","js/app.js","manifest.webmanifest","assets/logo.svg","assets/img/hero-bg.webp","assets/fonts/inter-latin.woff2","assets/icons/icon-192.png","favicon.ico"];
 self.addEventListener("install",e=>e.waitUntil(caches.open(V).then(c=>c.addAll(CORE)).then(()=>self.skipWaiting())));
 self.addEventListener("activate",e=>e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==V).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener("fetch",e=>{

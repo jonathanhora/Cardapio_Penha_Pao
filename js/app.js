@@ -38,6 +38,7 @@ const ban=s?`<button class="today" onclick="go('pratos','${hoje}')">${ic("🍽�
 return ban+`<h2 class="hh">O que você procura?</h2><div class="tiles">`+C.map(c=>`<button class="tile" onclick="go('${c[0]}')">${ic(c[2])}<b>${c[1]}</b><small>${c[4].reduce((n,x)=>n+rows(x).length,0)} itens</small></button>`).join("")+`</div>`}
 
 function draw(){
+$("#list").removeAttribute("data-pre");
 chips($("#cats"),[["home",`<i>${ic("🥖")}</i>Início`],...C.map(c=>[c[0],`<i>${ic(c[2])}</i>${c[1]}`])],q?"":cat,k=>go(k));
 const cur=q||cat==="home"?null:C.find(c=>c[0]===cat);
 $("#subs").style.display=cur&&cur[4].length>1?"flex":"none";
